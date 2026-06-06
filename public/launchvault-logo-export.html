@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LaunchVault — Logo & Social Export</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin:0; font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif; background:#0b0f1a; color:#e8eaf2; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: 26px; font-weight: 800; letter-spacing:-.5px; }
+  p.sub { color:#9aa3b8; margin-top:4px; }
+  .grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); margin-top:28px; }
+  .card { border:1px solid #232a3d; border-radius:18px; background:#121726; padding:18px; }
+  .card h2 { font-size:14px; margin:0 0 4px; }
+  .card small { color:#9aa3b8; }
+  .prev { margin:14px 0; border-radius:12px; overflow:hidden; display:grid; place-items:center; min-height:150px;
+          background:repeating-conic-gradient(#1b2233 0% 25%, #151b29 0% 50%) 50%/22px 22px; }
+  .prev img { max-width:100%; max-height:170px; }
+  button { width:100%; cursor:pointer; border:0; border-radius:10px; padding:10px 14px; font-weight:700; font-size:13px;
+           color:#fff; background:linear-gradient(135deg,#6366F1,#8B5CF6,#D946EF); }
+  button:hover { opacity:.92; }
+  .note { margin-top:30px; padding:16px 18px; border:1px solid #232a3d; border-radius:14px; background:#0f1422; color:#aab2c6; font-size:13px; line-height:1.6; }
+  code { background:#1b2233; padding:1px 6px; border-radius:5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LaunchVault — Logo & Social Kit</h1>
+  <p class="sub">Click any button to download a ready-to-use PNG. The square ones are sized for Instagram (1080×1080).</p>
+  <div class="grid" id="grid"></div>
+
+  <div class="note">
+    <strong>How to use:</strong><br/>
+    • <b>Instagram profile pic</b> → download "Profile / App icon (square)". It's full-bleed so the circular crop looks perfect.<br/>
+    • <b>Instagram post / story</b> → "Branded square (post)".<br/>
+    • <b>Website / email header, Linktree</b> → "Full logo (light or dark)".<br/>
+    • The <code>.svg</code> files in this folder are the vector originals — infinitely scalable, hand them to any designer/printer.
+  </div>
+</div>
+
+<script>
+const GRAD = `<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1080" y2="1080" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#6366F1"/><stop offset="0.52" stop-color="#8B5CF6"/><stop offset="1" stop-color="#D946EF"/>
+  </linearGradient>
+  <radialGradient id="hi" cx="0.5" cy="0" r="0.9">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </radialGradient></defs>`;
+const ARROW = `<g fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"><path d="M152 372 L256 296 L360 372" stroke-opacity="0.38"/><path d="M152 288 L256 212 L360 288" stroke-opacity="0.72"/><path d="M152 204 L256 128 L360 204" stroke-opacity="1.0"/></g>`;
+const FONT = `font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif"`;
+
+// Variant SVGs (each its own document → no id clashes)
+const variants = [
+  {
+    name: "Profile / App icon (square)", note: "1080×1080 · Instagram profile pic",
+    file: "launchvault-profile-1080.png", w:1080, h:1080,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">${GRAD}
+      <rect width="1080" height="1080" fill="url(#g)"/><rect width="1080" height="1080" fill="url(#hi)"/>
+      <g transform="translate(540,540) scale(1.5) translate(-256,-244)">${ARROW}</g></svg>`
+  },
+  {
+    name: "Branded square (post)", note: "1080×1080 · IG post / story",
+    file: "launchvault-post-1080.png", w:1080, h:1080,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">${GRAD}
+      <rect width="1080" height="1080" fill="url(#g)"/><rect width="1080" height="1080" fill="url(#hi)"/>
+      <g transform="translate(540,400) scale(1.05) translate(-256,-244)">${ARROW}</g>
+      <text x="540" y="770" text-anchor="middle" fill="#ffffff" ${FONT} font-size="100" font-weight="800" letter-spacing="2">LAUNCHVAULT</text>
+      <text x="540" y="840" text-anchor="middle" fill="#ffffff" fill-opacity="0.85" ${FONT} font-size="40" font-weight="600" letter-spacing="6">AI LEARNING PLATFORM</text></svg>`
+  },
+  {
+    name: "Icon (rounded, transparent)", note: "1080×1080 · transparent badge",
+    file: "launchvault-icon-1080.png", w:1080, h:1080,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 512 512">${GRAD.replace('x2="1080" y2="1080"','x2="472" y2="472"')}
+      <rect width="512" height="512" rx="116" fill="url(#g)"/><rect width="512" height="512" rx="116" fill="url(#hi)"/>${ARROW}</svg>`
+  },
+  {
+    name: "Full logo (light bg)", note: "transparent · dark wordmark",
+    file: "launchvault-logo-light.png", w:1600, h:450,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="450" viewBox="0 0 1280 360">${GRAD.replace('x2="1080" y2="1080"','x2="304" y2="308"').replace('x1="0" y1="0"','x1="48" y1="52"')}
+      <g transform="translate(48,52) scale(0.5)"><rect width="512" height="512" rx="116" fill="url(#g)"/><rect width="512" height="512" rx="116" fill="url(#hi)"/>${ARROW}</g>
+      <text x="356" y="180" ${FONT} font-size="132" font-weight="800" letter-spacing="-5" fill="#0B0F1A" dominant-baseline="middle">LaunchVault</text></svg>`
+  },
+  {
+    name: "Full logo (dark bg)", note: "transparent · white wordmark",
+    file: "launchvault-logo-dark.png", w:1600, h:450,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="450" viewBox="0 0 1280 360">${GRAD.replace('x2="1080" y2="1080"','x2="304" y2="308"').replace('x1="0" y1="0"','x1="48" y1="52"')}
+      <g transform="translate(48,52) scale(0.5)"><rect width="512" height="512" rx="116" fill="url(#g)"/><rect width="512" height="512" rx="116" fill="url(#hi)"/>${ARROW}</g>
+      <text x="356" y="180" ${FONT} font-size="132" font-weight="800" letter-spacing="-5" fill="#FFFFFF" dominant-baseline="middle">LaunchVault</text></svg>`
+  },
+];
+
+function download(svg, w, h, filename) {
+  const img = new Image();
+  const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
+  img.onload = () => {
+    const c = document.createElement("canvas"); c.width = w; c.height = h;
+    c.getContext("2d").drawImage(img, 0, 0, w, h);
+    URL.revokeObjectURL(url);
+    c.toBlob((b) => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(b); a.download = filename; a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }, "image/png");
+  };
+  img.src = url;
+}
+
+const grid = document.getElementById("grid");
+for (const v of variants) {
+  const card = document.createElement("div");
+  card.className = "card";
+  const preview = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(v.svg)));
+  card.innerHTML = `<h2>${v.name}</h2><small>${v.note}</small>
+    <div class="prev"><img src="${preview}" alt="${v.name}"/></div>
+    <button>Download PNG (${v.w}×${v.h})</button>`;
+  card.querySelector("button").addEventListener("click", () => download(v.svg, v.w, v.h, v.file));
+  grid.appendChild(card);
+}
+</script>
+</body>
+</html>

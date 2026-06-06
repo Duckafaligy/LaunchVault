@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your LaunchVault verification code</title>
+  </head>
+  <body style="margin:0;padding:0;background:#0b0f1a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#0f172a;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b0f1a;padding:32px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 25px 60px -15px rgba(99,102,241,0.45);">
+            <tr>
+              <td style="background:linear-gradient(135deg,#92400e 0%,#d97706 50%,#f59e0b 100%);padding:36px 36px 32px 36px;">
+                <div style="display:inline-block;background:rgba(255,255,255,0.18);padding:6px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#fef3c7;border:1px solid rgba(255,255,255,0.25);">
+                  LAUNCHVAULT
+                </div>
+                <h1 style="margin:18px 0 8px 0;font-size:28px;line-height:1.15;font-weight:800;color:#ffffff;letter-spacing:-0.02em;">
+                  Verification code
+                </h1>
+                <p style="margin:0;font-size:15px;line-height:1.55;color:#fef3c7;">
+                  Use the code below to confirm it's you.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:36px 36px 12px 36px;text-align:center;">
+                <p style="margin:0 0 18px 0;font-size:14px;line-height:1.55;color:#475569;">
+                  For your security, please enter this code in LaunchVault to confirm your account activity:
+                </p>
+                <div style="display:inline-block;background:#fff7ed;border:2px solid #fed7aa;color:#9a3412;font-family:'SF Mono','Courier New',monospace;font-size:32px;font-weight:800;letter-spacing:0.4em;padding:18px 24px;border-radius:14px;">
+                  {{ .Token }}
+                </div>
+                <p style="margin:18px 0 0 0;font-size:13px;color:#64748b;">
+                  This code expires in 10 minutes.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 36px 32px 36px;">
+                <p style="margin:0 0 10px 0;font-size:12px;color:#64748b;line-height:1.55;">
+                  If you didn't request this code, someone may be trying to access your account. Change your password immediately.
+                </p>
+                <p style="margin:0;font-size:12px;color:#94a3b8;">
+                  LaunchVault · <a href="{{ .SiteURL }}" style="color:#d97706;text-decoration:none;">{{ .SiteURL }}</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

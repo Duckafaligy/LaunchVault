@@ -1,0 +1,1 @@
+DELETE FROM public.content_payloads; DELETE FROM public.content_items; DELETE FROM public.packs;

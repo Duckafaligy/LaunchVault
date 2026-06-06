@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tanstack-start-app",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/server.ts",
+  // Auto-generate AI Mastery content every 2 hours (12 runs/day).
+  // This Cloudflare Cron Trigger is the PRIMARY (and only) scheduler. It invokes
+  // the scheduled() handler in src/server.ts, which generates content IN-PROCESS
+  // (no HTTP self-call — those were silently dropped by Cloudflare's loopback
+  // protection). The scheduled handler gets a long execution budget, so a full
+  // multi-type run completes. No external cron service (cron-job.org) is needed.
+  "triggers": {
+    "crons": ["0 */2 * * *"]
+  }
+}

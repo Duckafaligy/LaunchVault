@@ -1,0 +1,23 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LaunchVault">
+  <defs>
+    <linearGradient id="lvGrad" x1="48" y1="52" x2="304" y2="308" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="0.52" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#D946EF"/>
+    </linearGradient>
+    <radialGradient id="lvHi" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(48,52) scale(0.5)">
+    <rect width="512" height="512" rx="116" fill="url(#lvGrad)"/>
+    <rect width="512" height="512" rx="116" fill="url(#lvHi)"/>
+    <g fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M152 372 L256 296 L360 372" stroke-opacity="0.38"/>
+      <path d="M152 288 L256 212 L360 288" stroke-opacity="0.72"/>
+      <path d="M152 204 L256 128 L360 204" stroke-opacity="1.0"/>
+    </g>
+  </g>
+  <text x="356" y="180" font-family="'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="132" font-weight="800" letter-spacing="-5" fill="#FFFFFF" dominant-baseline="middle">LaunchVault</text>
+</svg>

@@ -1,0 +1,31 @@
+project_id = "fymvlygdmqpketfwevit"
+
+# =====================================================================
+# Auth email templates — premium LaunchVault branding.
+# These take effect when you run `supabase link --project-ref fymvlygdmqpketfwevit`
+# then `supabase config push`. Or paste the HTML manually into the dashboard
+# (see supabase/templates/README.md).
+# =====================================================================
+[auth.email.template.confirmation]
+subject = "Confirm your LaunchVault account"
+content_path = "./supabase/templates/confirm-signup.html"
+
+[auth.email.template.magic_link]
+subject = "Your LaunchVault sign-in link"
+content_path = "./supabase/templates/magic-link.html"
+
+[auth.email.template.recovery]
+subject = "Reset your LaunchVault password"
+content_path = "./supabase/templates/recovery.html"
+
+[auth.email.template.email_change]
+subject = "Confirm your new LaunchVault email"
+content_path = "./supabase/templates/email-change.html"
+
+[auth.email.template.invite]
+subject = "You're invited to LaunchVault"
+content_path = "./supabase/templates/invite.html"
+
+[auth.email.template.reauthentication]
+subject = "Your LaunchVault verification code"
+content_path = "./supabase/templates/reauthentication.html"

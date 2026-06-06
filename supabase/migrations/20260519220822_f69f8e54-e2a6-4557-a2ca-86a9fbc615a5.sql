@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.tick_streak(uuid) FROM authenticated;

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Confirm your LaunchVault account</title>
+  </head>
+  <body style="margin:0;padding:0;background:#0b0f1a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#0f172a;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0b0f1a;padding:32px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 25px 60px -15px rgba(99,102,241,0.45);">
+            <!-- Brand header -->
+            <tr>
+              <td style="background:linear-gradient(135deg,#312e81 0%,#6d28d9 45%,#c026d3 100%);padding:36px 36px 32px 36px;position:relative;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <div style="display:inline-block;background:rgba(255,255,255,0.18);padding:6px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#e0e7ff;border:1px solid rgba(255,255,255,0.25);">
+                        LAUNCHVAULT
+                      </div>
+                      <h1 style="margin:18px 0 8px 0;font-size:28px;line-height:1.15;font-weight:800;color:#ffffff;letter-spacing:-0.02em;">
+                        Confirm your account
+                      </h1>
+                      <p style="margin:0;font-size:15px;line-height:1.55;color:#e0e7ff;">
+                        One click to unlock your AI Mastery Engine — prompts, courses, workflows, agent blueprints, and daily insights, refreshed every six hours.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Body -->
+            <tr>
+              <td style="padding:36px 36px 12px 36px;">
+                <p style="margin:0 0 22px 0;font-size:16px;line-height:1.6;color:#1f2937;">
+                  Hey there — you're seconds away from getting in. Tap the button below to confirm your email and start exploring across 50 AI mastery domains.
+                </p>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" style="padding:8px 0 14px 0;">
+                      <a href="{{ .ConfirmationURL }}" style="display:inline-block;background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#c026d3 100%);color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:14px 36px;border-radius:12px;box-shadow:0 12px 28px -8px rgba(124,58,237,0.55);">
+                        Confirm my account →
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin:18px 0 6px 0;font-size:13px;color:#475569;text-align:center;">
+                  Or paste this link in your browser:
+                </p>
+                <p style="margin:0;font-size:12px;color:#64748b;text-align:center;word-break:break-all;">
+                  <a href="{{ .ConfirmationURL }}" style="color:#6d28d9;text-decoration:underline;">{{ .ConfirmationURL }}</a>
+                </p>
+              </td>
+            </tr>
+
+            <!-- What you get -->
+            <tr>
+              <td style="padding:24px 36px 8px 36px;">
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px 20px;">
+                  <p style="margin:0 0 10px 0;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#6d28d9;">What's inside</p>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="padding:4px 0;font-size:14px;color:#1f2937;">⚡  5 new prompts, every six hours</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:4px 0;font-size:14px;color:#1f2937;">🎓  Codecademy-style micro-courses with practice tasks</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:4px 0;font-size:14px;color:#1f2937;">🤖  Production-ready agent blueprints + workflows</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:4px 0;font-size:14px;color:#1f2937;">💼  AI business plays that actually move revenue</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:4px 0;font-size:14px;color:#1f2937;">📰  Daily insights so you never fall behind</td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="padding:24px 36px 32px 36px;">
+                <p style="margin:0 0 10px 0;font-size:12px;color:#64748b;line-height:1.55;">
+                  This link expires in 24 hours. If you didn't sign up, you can safely ignore this email.
+                </p>
+                <p style="margin:0;font-size:12px;color:#94a3b8;">
+                  LaunchVault · <a href="{{ .SiteURL }}" style="color:#6d28d9;text-decoration:none;">{{ .SiteURL }}</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
