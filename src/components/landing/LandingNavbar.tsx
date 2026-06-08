@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 
 const NAV = [
-  { label: "Learn AI", to: "/learn-ai" },
-  { label: "Features", to: "/features" },
-  { label: "Pricing",  to: "/pricing"  },
-  { label: "Our story", to: "/about"   },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Stories", to: "/blog"    },
 ];
 
 export function LandingNavbar() {

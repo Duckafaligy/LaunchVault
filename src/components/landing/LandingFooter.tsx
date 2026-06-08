@@ -53,7 +53,6 @@ export function LandingFooter() {
           <FooterCol
             title="Product"
             links={[
-              { to: "/learn-ai",                label: "Learn AI" },
               { to: "/how-to-learn-ai",         label: "How to learn AI" },
               { to: "/features",                label: "Features" },
               { to: "/pricing",                 label: "Pricing" },
@@ -74,9 +73,9 @@ export function LandingFooter() {
           <FooterCol
             title="Company"
             links={[
-              { to: "/about",          label: "Our story" },
+              { to: "/about",          label: "About" },
               { to: "/how-it-works",   label: "How it works" },
-              { to: "/blog",           label: "Blog" },
+              { to: "/blog",           label: "Stories" },
               { to: "/glossary",       label: "AI Glossary" },
               { to: "/library",        label: "Public library" },
               { to: "/contact",        label: "Contact" },
